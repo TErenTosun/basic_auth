@@ -3,6 +3,7 @@
 ## Build
 Start a terminal instance in the root directory of the project and type make to build the executable.
 Run the program by typing "./main.exe"
+
 Or build and run the program with the line "make; ./main.exe"
 
 ## Usage
