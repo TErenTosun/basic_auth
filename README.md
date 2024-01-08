@@ -10,5 +10,5 @@ The program asks the user whether they want to login or register then asks the u
 Program checks if there is an existing database (I say database but it's just a .dat file.) and if there's none, it creates one and exits.
 If there is an already existing database, program performs necessary authentication operations.
 
-### Attention
+## Attention
   This program is not suited for real world usage. It's simply a practice project.
