@@ -12,20 +12,26 @@ int main(void) {
     int user_prompt;
     char username[100];
     char password[100];
-    printf("1)Login\n2)Register\n> ");
-    scanf("%d", &user_prompt);
-    printf("Enter Username: ");
-    scanf("%s", &username);
-    printf("Enter Password: ");
-    scanf("%s", &password);
-    if (user_prompt == 1) {
-        login(username, password);
-    }
-    else if (user_prompt == 2) {
-        register_user(username, password);
+    check_db();
+    if (check_db() == 0) {
+        printf("1)Login\n2)Register\n> ");
+        scanf("%d", &user_prompt);
+        printf("Enter Username: ");
+        scanf("%s", &username);
+        printf("Enter Password: ");
+        scanf("%s", &password);
+        if (user_prompt == 1) {
+            login(username, password);
+        }
+        else if (user_prompt == 2) {
+            register_user(username, password);
+        }
+        else {
+            printf("ERROR: Invalid input\n");
+        }
     }
     else {
-        printf("ERROR: Invalid input\n");
+        create_db();
     }
     return 0;
 }
